@@ -16,22 +16,80 @@ body {
   scroll-behavior: smooth;
 }
 
+.project {
+  box-shadow: 0 0 2px #0d151e;
+  border-radius: 0.5em;
+  border: 1px solid var(--theme-2-neutral-9, #d0d9d4);
+  background: var(--theme-2-neutral-10, #ebf0ee);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: #fff;
+  border-radius: 0.5em;
+  padding: 1em 0;
+}
+
+.project p {
+  color: var(--theme-2-neutral-2, #3a4a42);
+  font-weight: 600;
+  line-height: 133.333%;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  margin: 0;
+  gap: 0.5em;
+}
+
+button {
+  margin: auto;
+  padding: 0.75em;
+  color: var(--theme-2-neutral-11, #fff);
+  font-weight: 500;
+  line-height: 141.176%;
+  letter-spacing: 0.51px;
+  border-radius: 0.25em;
+  background: var(--theme-2-primary-2, #36b37f);
+  border: none;
+  transition: background-color 0.4s;
+}
+
+li,
+button,
+i {
+  cursor: pointer;
+}
+
 .ov-hi {
   overflow: hidden !important;
 }
 
+button:hover {
+  background-color: #087045;
+}
+
 .see-pj {
   font-size: 0.8em;
-    margin: 0.7em auto;
-    padding: 0.5em;
-    color: var(--theme-2-neutral-11, #fff);
-    font-weight: 500;
-    line-height: 141.176%;
-    letter-spacing: 0.51px;
-    border-radius: 0.25em;
-    background: var(--theme-2-primary-2, #36b37f);
-    border: none;
-    transition: background-color 0.4s;
+  margin: 0.7em auto;
+  padding: 0.5em;
+  color: var(--theme-2-neutral-11, #fff);
+  font-weight: 500;
+  line-height: 141.176%;
+  letter-spacing: 0.51px;
+  border-radius: 0.25em;
+  background: var(--theme-2-primary-2, #36b37f);
+  border: none;
+  transition: background-color 0.4s;
 }
 
 .home {
@@ -62,13 +120,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .pj .project {
   width: 70%;
   height: 60%;
-  /* flex-direction: row; */
 }
-
-
 
 .toolbar {
   display: flex;
@@ -181,57 +237,6 @@ i:hover {
   color: var(--neutrals-n-800, #172b4d);
   font-weight: 700;
   line-height: 130%;
-}
-
-.project {
-  border-radius: 0.5em;
-  border: 1px solid var(--theme-2-neutral-9, #d0d9d4);
-  background: var(--theme-2-neutral-10, #ebf0ee);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.projectInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  background-color: #fff;
-  border-radius: 0.5em;
-  padding: 1em 0;
-}
-
-.project p {
-  color: var(--theme-2-neutral-2, #3a4a42);
-  font-weight: 600;
-  line-height: 133.333%;
-  margin: 0;
-}
-
-ul {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
-  justify-content: center;
-  margin: 0;
-  gap: 0.5em;
-}
-
-button {
-  margin: auto;
-  padding: 0.75em;
-  color: var(--theme-2-neutral-11, #fff);
-  font-weight: 500;
-  line-height: 141.176%;
-  letter-spacing: 0.51px;
-  border-radius: 0.25em;
-  background: var(--theme-2-primary-2, #36b37f);
-  border: none;
-  transition: background-color 0.4s;
-}
-
-button:hover {
-  background-color: #087045;
 }
 
 li {
@@ -445,17 +450,34 @@ a {
   transition: all 1s ease;
 }
 
-.menu {
+.closeBtnP {
+  position: absolute;
+  font-size: 20px !important;
+  right: 5%;
+  top: 10%;
+  background-color: #121313;
+  width: 30px;
+  height: 30px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5eaea;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #161917;
 }
 
-/* .navM {
-  display: none;
-} */
+.closeBtnP:hover .closeBtnP {
+  color: #c5c9ce !important;
+}
 
 @media all and (min-width: 375px) {
   .home {
     position: relative;
+  }
+
+  .project {
+    width: 20.4em;
+    height: 29.6em;
   }
 
   .pj .project {
@@ -472,7 +494,6 @@ a {
     justify-content: space-evenly;
     align-items: flex-start;
     padding-left: 10px;
-
   }
 
   .pjInfo {
@@ -489,11 +510,11 @@ a {
   .pjInfo p {
     text-align: left;
     text-wrap: wrap;
-    max-width: 90%;
+    max-width: 95%;
     max-height: 80%;
     overflow: hidden;
     font-size: 14px !important;
-    line-clamp: 4;
+    max-lines: 4;
   }
 
   .btnGroup {
@@ -540,7 +561,7 @@ a {
     font-weight: lighter !important;
     stroke: none;
     border: none;
-    right: 10%;
+    right: 15%;
     top: 1%;
     color: #dae4e0;
   }
@@ -615,11 +636,6 @@ a {
     height: 0.25em;
     background: #36b37e;
     border-radius: 0.25em;
-  }
-
-  .project {
-    width: 20.4em;
-    height: 29.6em;
   }
 
   .project p {
@@ -726,10 +742,21 @@ a {
     height: 37em;
   }
 
+  .project {
+    width: 12em;
+    height: 16em;
+  }
+
   .pj .project {
-    width: 70%;
-    height: 50%;
+    width: 63%;
+    height: 60%;
     flex-direction: row;
+    position: relative;
+  }
+
+  .projectInfo {
+    padding: 0.5em 0;
+    gap: 0.8em;
   }
 
   .pj .project .projectInfo {
@@ -738,29 +765,52 @@ a {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
+  }
+
+  .pj .project .projectInfo .languages {
+    padding-bottom: 0.7rem;
   }
 
   .pjInfo {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-height: 50%;
+    max-height: 70%;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding: 1rem;
     text-wrap: wrap;
-    line-clamp: 4;
   }
 
   .pjInfo p {
     text-align: left;
     text-wrap: wrap;
-    max-width: 90%;
-    max-height: 70%;
-    overflow: hidden;
-    line-clamp: 4;
-    line-break: loose;
+    max-width: 96%;
+    max-height: 100%;
+  }
+
+  .project p {
+    font-size: 1em;
+  }
+
+  .aboutme p {
+    width: 60%;
+    height: 3em;
+    font-size: 0.8em;
+  }
+
+  .contact p {
+    text-align: left;
+    font-size: 1em;
+    width: 40%;
+    height: max-content;
+    margin-bottom: 5em;
+  }
+
+  .pj .project .projectInfo p {
+    font-size: 20px;
+    padding-bottom: 1rem;
+    padding-top: 0.6rem;
   }
 
   .btnGroup {
@@ -854,20 +904,6 @@ a {
     display: none;
   }
 
-  .project {
-    width: 12em;
-    height: 16em;
-  }
-
-  .projectInfo {
-    padding: 0.5em 0;
-    gap: 0.8em;
-  }
-
-  .project p {
-    font-size: 1em;
-  }
-
   li {
     font-size: 0.5em;
     padding: 0.5em;
@@ -884,12 +920,6 @@ a {
 
   .aboutme h3 {
     font-size: 2em;
-  }
-
-  .aboutme p {
-    width: 60%;
-    height: 3em;
-    font-size: 0.8em;
   }
 
   .bg1 {
@@ -940,14 +970,6 @@ a {
     width: 630px;
     display: flex;
     flex-direction: row;
-  }
-
-  .contact p {
-    text-align: left;
-    font-size: 1em;
-    width: 40%;
-    height: max-content;
-    margin-bottom: 5em;
   }
 
   .contact form {
@@ -1010,7 +1032,6 @@ a {
 
   .icons2 {
     font-size: 0.7em;
-    /* margin-top: 100px; */
     padding: 15px;
   }
 
