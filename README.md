@@ -63,11 +63,10 @@ For more information on the importance of a professional README for your reposit
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio:setup_and_mobiel_first] <a name="about-project"></a>
+# 📖 [Portfolio:mobile menu & details popup window] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[Portfolio:setup_and_mobiel_first]** is a responsive web design made with html css and javascript. It show the tidiness, informativeness of my portfolio.
+**[Portfolio:mobile menu & details popup window]** is a responsive web design made with html css and javascript. It show the tidiness, informativeness of my portfolio.
 <!-- 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -100,7 +99,6 @@ Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
   Features are yet to be added.
 <!-- - **[key_feature_1]**
 - **[key_feature_2]**
@@ -112,7 +110,6 @@ Features -->
 
 <!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
 
-> Add a link to your deployed project.
 
 <!-- - [Live Demo Link](https://google.com) -->
 
@@ -122,7 +119,6 @@ Features -->
 
 <!-- ## 💻 Getting Started <a name="getting-started"></a> -->
 
-> Describe how a new developer could make use of your project.
 
 <!-- To get a local copy up and running, follow these steps. -->
 
@@ -206,11 +202,10 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Kaung Myat Soe**
 
-- GitHub: [@Newt27](https://github.com/lizzy-km)
+- GitHub: [@lizzy-km](https://github.com/lizzy-km)
 
 <!-- 👤 **Author2**
 
@@ -224,7 +219,6 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 Features are yet to be added.
 <!-- - [ ] **[new_feature_1]**
 - [ ] **[new_feature_2]**
@@ -256,7 +250,6 @@ If you like this project... -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank Ko Htet Naing, the moderators and the code reviewers for making time to review and give constructive feedbacks on our projects and give suggestions on how to improve our skills.
 
@@ -284,6 +277,6 @@ I would like to thank Ko Htet Naing, the moderators and the code reviewers for m
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
