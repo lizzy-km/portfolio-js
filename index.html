@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="index.js" type="module" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <div id="infoData" class="d-none" >
+        <div id="pjInfo" class="pjInfo">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled it
+              1960s with the releaLorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s, when an unknown printer took a galley of type
+              and scrambled it 1960s with the relea
+            </p>
+            <div class='btnGroup' >
+            <button id="livePj" type="button" value="live Project">
+              See live
+            </button>
+            <button id="resPj" type="button" value="res Project">
+              See resource
+            </button>
+            </div>
+           
+          </div>
+    </div>
+    <section id="vPj" class=" pj d-none " >
+
+    </section>
+    <section id="home" class="home">
+        
+      <header class="toolbar">
+        <div class="mylogo"> <a href="#home" >My Logo</a> </div>
+        <div class="menu">
+          <a href="#portfolio" class="nav1 portfolio">Portfolio</a>
+          <a href="#about" class="nav1 about">About</a>
+          <a href="#contact" class="nav1 contact1">Contact</a>
+        </div>
+        <a id="navBtn" onclick="openNav()" href="#"
+          ><i class="bar navBtn fa fa-bars"></i
+        ></a>
+      </header>
+      <div id="m-nav" class="menu-m">
+        <a id="close" onclick="closeNav()" href="#"><i class="close fa fa-close"></i></a>
+
+        <a id="close" href="#portfolio" class="navM ">Portfolio</a>
+        <a id="close" href="#about" class="navM ">About</a>
+        <a id="close" href="#contact" class="navM ">Contact</a>
+      </div>
+
+      <section class="intro">
+        <h2 class="intro1">Hey there.<br />I'm Vince.</h2>
+        <h2 class="intro2">I'm a software developer.</h2>
+        <p class="content">
+          I can help you build a product , feature or website Look through some
+          of my work and experience! If you like what you see and have a project
+          you need coded, don’t hesitate to contact me.
+        </p>
+        <div class="icons">
+          <a hre="#"><i class="social fa fa-twitter"></i></a>
+          <a hre="#"><i class="social fa fa-linkedin"></i></a>
+          <a hre="#"><i class="social fa fa-medium"></i></a>
+          <a hre="#"><i class="social fa fa-github"></i></a>
+          <a hre="#"><i class="social fa fa-angellist"></i></a>
+        </div>
+        <i class="arrow fa fa-angle-down"></i>
+      </section>
+    </section>
+    <section id="portfolio" class="works">
+      <header>
+        My Recent<br />
+        Works
+      </header>
+
+      <div  class="indicator"></div>
+      <div id="project" class="project one">
+        <div id="projectInfo" class="projectInfo">
+          <p>
+            Data Dashboard Healthcare
+          </p>
+          <ul class="languages">
+            <li>Ruby on Rails</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+          </ul>
+          <button href="#home" id="seePj" type="button" value="See Project">  See Project</button>
+        </div>
+      </div>
+      <div id="project"  class="project two">
+        <div class="projectInfo">
+          <p>
+            Website Portfolio 
+          </p>
+          <ul class="languages">
+            <li>Ruby on Rails</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+          </ul>
+          <button href="#home" type="button" id="seePj" value="See Project">See Project</button>
+        </div>
+      </div>
+      <div id="project" class="project three">
+        <div class="projectInfo">
+          <p>
+            Profesional Art Printing Data More
+          </p>
+          <ul class="languages">
+            <li>Ruby on Rails</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+          </ul>
+          <button href="#home" id="seePj" type="button" value="See Project">See Project</button>
+        </div>
+      </div>
+      <div id="project" class="project four">
+        <div class="projectInfo">
+          <p>
+            Data Dashboard Healthcare
+          </p>
+          <ul class="languages">
+            <li>Ruby on Rails</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+          </ul>
+          <button href="#home" id="seePj" type="button" value="See Project">See Project</button>
+        </div>
+      </div>
+      <div id="project" class="project five">
+        <div class="projectInfo">
+          <p>
+            Website Portfolio 
+          </p>
+          <ul class="languages">
+            <li>Ruby on Rails</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+          </ul>
+          <button href="#home" id="seePj" type="button" value="See Project">See Project</button>
+        </div>
+      </div>
+      <div id="project" class="project six">
+        <div class="projectInfo">
+          <p>
+            Profesional Art Printing Data More
+          </p>
+          <ul class="languages">
+            <li>Ruby on Rails</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+          </ul>
+          <button href="#home" id="seePj" type="button" value="See Project">See Project</button>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="aboutme">
+      <img class="bg1" src="img\bg-1.png" />
+      <img class="bg2" src="img\bg-2.png" />
+      <img class="bg4" src="img\bg-4.png" />
+      <img class="bg5" src="img\bg-5.png" />
+      <h3>About me</h3>
+      <p>
+        I can help you build a product , feature or website Look through some of
+        my work and experience! If you like what you see and have a project you
+        need coded, don’t hesitate to contact me.
+      </p>
+      <button type="button" value="get-my-resume">Get my resume</button>
+      <div class="dev-info">
+        <div class="info languages">
+          <img src="img\languages.png" alt="languages.png" />
+          <p>Languages</p>
+          <ul>
+            <li>JavaScript</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+        <div class="info frameworks">
+          <img src="img\frameworks.png" alt="languages.png" />
+          <p>Frameworks</p>
+          <ul>
+            <li>React.js</li>
+            <li>Ruby on Rails</li>
+            <li>RSpec</li>
+            <li>Capybara</li>
+            <li>Selenium</li>
+          </ul>
+        </div>
+        <div class="info skills">
+          <img src="img\skills.png" alt="languages.png" />
+          <p>Skills</p>
+          <ul>
+            <li>Database Mangement</li>
+            <li>Version Control</li>
+            <li>CLI</li>
+            <li>Web Development</li>
+            <li>API Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <p>
+        I'm always interested in hearing about new projects, so if you'd like to
+        chat please get in touch.
+      </p>
+      <form action="https://formspree.io/f/mpzgkrbn" method="post">
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Full Name"
+          maxlength="30"
+          required
+        />
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="First Name"
+          maxlength="30"
+          required
+        />
+        <input
+          type="text"
+          id="lastName"
+          id="lastName"
+          placeholder="Last Name"
+          maxlength="30"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        />
+        <textarea
+          id="message"
+          placeholder="Hey, I'd like to connect to..."
+          maxlength="500"
+          required
+        ></textarea>
+        <button type="submit" value="get-in-touch">Get in touch</button>
+      </form>
+    </section>
+    <section class="fot-bot"></section>
+    <footer class="footer">
+      <img class="bg3" src="img/bg-3.png" />
+      <span>kaungmyatsoe2k21@gmial.com</span>
+      <div class="icons2">
+        <a hre="#"><i class="social fa fa-twitter"></i></a>
+        <a hre="#"><i class="social fa fa-linkedin"></i></a>
+        <a hre="#"><i class="social fa fa-medium"></i></a>
+        <a hre="#"><i class="social fa fa-github"></i></a>
+        <a hre="#"><i class="social fa fa-angellist"></i></a>
+      </div>
+      <div class="indicator2"></div>
+    </footer>
+    <img class="bg6" src="img/bg-6.png" />
+    <img class="bg7" src="img/bg-7.png" />
+    <img class="bg8" src="img/bg-8.png" />
+
+    
+  </body>
+</html>
