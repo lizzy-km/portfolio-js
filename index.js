@@ -61,7 +61,6 @@ const works = [
   },
 ];
 
-
 // <div id="project" class="project one">
 // <div id="projectInfo" class="projectInfo">
 //   <p>
@@ -83,16 +82,16 @@ const navBtn = document.getElementById("navBtn");
 const menuBox = document.getElementById("m-nav");
 
 navBtn.addEventListener("click", () => {
-    menuBox.classList.add("show-m");
-    menuBox.classList.remove("menu-m");
-  });
-  closeBtn.addEventListener("click", () => {
-    menuBox.classList.remove("show-m");
-    menuBox.classList.add("menu-m");
-  });
+  menuBox.classList.add("show-m");
+  menuBox.classList.remove("menu-m");
+});
+closeBtn.addEventListener("click", () => {
+  menuBox.classList.remove("show-m");
+  menuBox.classList.add("menu-m");
+});
 
-const portfolio = document.getElementById('portfolio')
-const viewBox = document.getElementById('vPj')
+const portfolio = document.getElementById("portfolio");
+const viewBox = document.getElementById("vPj");
 
 let closeBtnP;
 let project;
@@ -107,90 +106,77 @@ let liveBtn;
 let srcBtn;
 let detailEl;
 
+works.map((work) => {
+  project = document.createElement("div"); //create new div
+  project.classList.add("project"); // add class to new div
+  portfolio.appendChild(project); // add new div to parent div
 
-works.map( work => {
+  projectInfo = document.createElement("div"); //create new div
+  projectInfo.classList.add("projectInfo"); // add class to new div
+  project.appendChild(projectInfo); // add new div to parent div that we create
 
- project = document.createElement('div') //create new div
-project.classList.add('project') // add class to new div
-portfolio.appendChild(project) // add new div to parent div
+  titleEl = document.createElement("p"); // create new <p></p>
+  titleEl.innerText = work.title; // add text to <p></p>
+  projectInfo.appendChild(titleEl); // add new <p></p> to parent div that we create
 
+  languagesEl = document.createElement("ul");
+  languagesEl.classList.add("languages");
+  projectInfo.appendChild(languagesEl);
 
- projectInfo = document.createElement('div') //create new div
-projectInfo.classList.add('projectInfo') // add class to new div
-project.appendChild(projectInfo) // add new div to parent div that we create
+  work.tech.map((tech) => {
+    lanList = document.createElement("li");
+    lanList.innerText = tech;
+    languagesEl.appendChild(lanList);
+  });
 
+  seePj = document.createElement("button");
+  seePj.innerText = "See Project";
+  projectInfo.appendChild(seePj);
 
- titleEl = document.createElement('p') // create new <p></p>
-titleEl.innerText = work.title // add text to <p></p>
-projectInfo.appendChild(titleEl) // add new <p></p> to parent div that we create
+  //____________________________________//
 
- languagesEl = document.createElement('ul')
-languagesEl.classList.add('languages')
-projectInfo.appendChild(languagesEl)
+  pjInfo = document.createElement("div");
+  pjInfo.classList.add("pjInfo");
 
-work.tech.map(tech => {
-   lanList = document.createElement('li')
-  lanList.innerText = tech
-  languagesEl.appendChild(lanList)
-})
+  detailEl = document.createElement("p");
+  detailEl.innerText = work.detail;
+  pjInfo.appendChild(detailEl);
 
+  btnGroup = document.createElement("div");
+  btnGroup.classList.add("btnGroup");
 
- seePj = document.createElement('button')
-seePj.innerText = 'See Project'
-projectInfo.appendChild(seePj)
+  liveBtn = document.createElement("button");
+  liveBtn.innerText = "See Live";
+  btnGroup.appendChild(liveBtn);
 
-//____________________________________//
+  srcBtn = document.createElement("button");
+  srcBtn.innerText = "See source";
+  btnGroup.appendChild(srcBtn);
+  pjInfo.appendChild(btnGroup);
 
-pjInfo = document.createElement('div')
-pjInfo.classList.add('pjInfo')
+  closeBtnP = document.createElement("div");
+  closeBtnP.classList.add("closeBtnP");
+  const closeIcon = document.createElement("i");
+  closeIcon.classList.add("closeIcon", "fa", "fa-close");
+  closeBtnP.appendChild(closeIcon);
 
-detailEl = document.createElement('p')
-detailEl.innerText = work.detail
- pjInfo.appendChild(detailEl)
+  closeBtnP.addEventListener("click", () => {
+    console.log("close pj");
+    viewBox.classList.add("d-none");
+    viewBox.classList.remove("d-flex");
+    viewBox.removeChild(viewBox.lastElementChild);
+    viewBox.removeChild(viewBox.firstElementChild);
+  });
 
-btnGroup = document.createElement('div')
-btnGroup.classList.add('btnGroup')
+  seePj.addEventListener("click", () => {
+    viewBox.classList.remove("d-none");
+    viewBox.classList.add("d-flex");
+    const clone = project.cloneNode(true);
 
-liveBtn = document.createElement('button')
-liveBtn.innerText = 'See Live'
-btnGroup.appendChild(liveBtn)
+    viewBox.appendChild(clone);
+    viewBox.appendChild(closeBtnP);
 
-srcBtn = document.createElement('button')
-srcBtn.innerText = 'See source'
-btnGroup.appendChild(srcBtn)
-pjInfo.appendChild(btnGroup)
-
-
-
-closeBtnP = document.createElement('div')
-closeBtnP.classList.add('closeBtnP')
-const closeIcon = document.createElement('i')
-closeIcon.classList.add('closeIcon', 'fa', 'fa-close')
-closeBtnP.appendChild(closeIcon)
-
-
-closeBtnP.addEventListener('click', () => {
-  console.log('close pj');
-  viewBox.classList.add("d-none");
-  viewBox.classList.remove("d-flex");
-  viewBox.removeChild(viewBox.lastElementChild)
-  viewBox.removeChild(viewBox.firstElementChild)
-
+    const btn = viewBox.firstElementChild.firstElementChild;
+    btn.replaceChild(pjInfo, btn.lastElementChild);
+  });
 });
-
-seePj.addEventListener('click', () => {
-  viewBox.classList.remove("d-none");
-  viewBox.classList.add("d-flex");
-  const clone = project.cloneNode(true);
-
-  viewBox.appendChild(clone)
-  viewBox.appendChild(closeBtnP)
-
-  const btn = viewBox.firstElementChild.firstElementChild
-  btn.replaceChild(pjInfo, btn.lastElementChild);
-
- 
-
-})
-
-})
